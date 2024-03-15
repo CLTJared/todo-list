@@ -1,0 +1,197 @@
+/* Jared's Fun Default Styling Sheet for Projects */
+:root {
+  font-family: system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: .5px;
+  font-weight: 400;
+  font-size: 16px;
+
+  color-scheme: light dark;
+  background-color: rgba(var(--body-color), 1);
+  color: rgba(var(--font-color), .9);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 
+    Colors below used in RGB or RGBA values
+     rgb(var(--body-color)) 
+      or
+     rgba(var(--body-color), .5)
+
+     purple: 170, 50, 255
+
+  */
+  --body-color: 35, 35, 35;
+  --font-color: 255, 255, 255;
+  --highlight: 170, 50, 255;
+  --warning: 255, 255, 0;
+  --conflict: 200, 0, 0;
+  --success: 0, 200, 0;
+
+}
+
+/* Heading reset */
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0; 
+}
+
+#root {
+  margin: 0 1rem;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button Styling */
+.btn {
+  background-image: linear-gradient(rgba(var(--highlight), .1), rgba(var(--highlight), .2));
+  background-color: rgb(var(--body-color));
+  border: 1px solid rgba(var(--highlight), 1);
+  border-radius: 5px;
+  padding: .75rem 1rem;
+  text-align: center;
+  vertical-align: middle; 
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+  text-transform: uppercase;
+  color: rgb(var(--highlight));
+}
+.btn:hover {
+  background-image: linear-gradient(rgba(var(--highlight), .3), rgba(var(--highlight), .5));
+  color: rgba(var(--font-color), .75);
+}
+.btn:active {
+  box-shadow: rgba(var(--highlight), .1) 0 0 0 1px inset, rgba(var(--highlight), .2) 0 6px 15px 0, rgba(var(--highlight), .1) 0 2px 2px 0, rgba(var(--highlight), .3) 0 0 0 4px;
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background-color: rgba(var(--body-color), 1);
+  background-image: none;
+  border: 1px solid rgba(var(--highlight), 1);
+  box-shadow: inset; 
+  color: rgb(var(--highlight));
+}
+.btn-tertiary {
+  color: green;
+}
+.btn-full {
+  width: 100%; 
+}
+
+/* Form Styling */
+input {
+  background-color: rgba(var(--body-color),)
+}
+input[type="text"], input[type="search"] {
+  padding: .75rem 1rem;
+  margin: .25rem 0;
+  border: 1px solid rgba(var(--font-color), .25);
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 110%;
+}
+input[type="text"]:focus, input[type="search"]:focus {
+  outline: none; 
+  border: 1px solid rgba(var(--highlight), .75)
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: .5rem;
+  cursor: pointer;
+  accent-color: rgba(var(--body-color), 1); 
+}
+input[type="checkbox"]:checked {
+  accent-color: rgba(var(--highlight), 1); 
+}
+
+/* List Styling */
+ul { /* Remove default padding to indent */
+  margin: 0;
+  padding: 0; 
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem; 
+  transition: all .25s ease-in-out;
+}
+
+li label {
+  padding-right: 1rem;
+  cursor: pointer;
+  flex: 1 0 1rem
+}
+
+label span {
+  word-break: break-word;
+  hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+}
+
+li:hover {
+  background-color: rgba(var(--highlight), .1) 
+}
+
+.strike {
+  text-decoration: line-through;
+  opacity: .65;
+}
+
+
+/* priority levels */
+.priority-2::before { /* Level 3 */
+  content: '◉';
+  color: rgb(var(--conflict));
+  padding-top: .1rem;
+  padding-right: .5rem;
+}
+.priority-1::before { /* Level 2 */
+  content: '◉';
+  color: rgb(var(--warning));
+  padding-top: .1rem;
+  padding-right: .5rem;
+}
+.priority-0::before { /* Default/Normal Priority */
+  content: '◉';
+  padding-top: .1rem;
+  padding-right: .5rem;
+}
+
+.text-conflict {
+  color: rgb(var(--conflict));
+}
+
+.text-small {
+  font-size: 75%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+}
+
+
+/* Link Styling */
+a {
+  text-decoration: none;
+}
