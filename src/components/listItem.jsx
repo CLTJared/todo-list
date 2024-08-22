@@ -1,13 +1,13 @@
-import { useRef, useEffect } from 'react'
+// import { useRef, useEffect } from 'react'
 
 export function TodoItem({
-  deleteTodo, toggleTodo,
+  deleteTodo, toggleTodo, updatePriority,
   id, status, priority, title,
   }) {
 
-  const handleDrag = (e) => {
+  // const handleDrag = (e) => {
 
-  }
+  // }
 
   return (
     <li className={`priority-${priority}`} >
@@ -20,7 +20,11 @@ export function TodoItem({
         <span>{title}</span>
       </label>
       <button className="btn btn-secondary" onClick={() => deleteTodo(id)} type="button">
-        <span><i className="fa-solid fa-delete-left"></i> Delete</span>
+        <i className="fa-solid fa-ban"></i>
+      </button>
+      &nbsp;
+      <button className="btn btn-secondary" onClick={() => updatePriority(id, priority)} type="button">
+        <i className="fa-solid fa-arrow-down-up-across-line"></i>
       </button>
     </li>
   );

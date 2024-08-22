@@ -14,7 +14,7 @@ export function TodoForm({ action }) {
     return (
         <form name="form-todo" className="" onSubmit={handleForm}>
             <label htmlFor="todoItem">New ToDo Item:</label>
-            <input key={1} type="text" id="todoItem" ref={newItem} />
+            <input key={1} type="text" id="todoItem" ref={newItem} autoFocus />
 
             <button className="btn btn-full">
                 <i className="fa-solid fa-square-plus"></i> Add
