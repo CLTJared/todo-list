@@ -3,6 +3,7 @@ import { TodoItem } from './listItem';
 
 export function TodoList({ deleteTodo, toggleTodo, sort, updatePriority, todos }) {
 
+//animations for the list
 const [parent, enableAnimations] = useAutoAnimate( /* optional config*/ )
 
 let sortable;
@@ -14,7 +15,8 @@ switch (sort) {
     case 'dsc':
         sortable = todos.sort((a,b) => a.priority - b.priority);
         break;
-    case 'manual':
+    case 'manual': 
+    // Feature not yet implemented, just defaults to no sort
         sortable = todos;
         break;
     default:
